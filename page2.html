@@ -1,0 +1,93 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+
+<!--FOR THE HOW MANY MUSIC TYPES SELECTED -->
+<script type="text/javascript">
+	function howMany(selectObject){
+		var numSelected = 0;
+		for (var i = 0; i < selectObject.options.length; i++){
+			if(selectObject.options[i].selected){
+				numSelected++;
+			}
+		}
+		return numSelected;
+	}
+</script>
+
+
+  </head>
+
+
+
+<body>
+  
+ <div class="jumbotron jumbotron-flud text-center">
+  <h1>MotoStore Online </h1>
+  <h5>The <mark>LOWEST</mark> prices on the Web!!!!!</h5>
+  <a href="bootstrap.html">Page 1</a>
+  <a href="page.html">Page 2</a>
+  <a href="#"><s>Page 3</s></a>
+
+</div> 
+
+<div>
+	
+<form name="selectForm">
+	<p>
+		<label for="musicTypes">Choose few types of music</label>
+		<select id="musicTypes" name="musicTypes" multiple="multiple">
+			<option>Country</option>
+			<option>Rock</option>
+			<option>Rap</option>
+			<option>Pop</option>
+			<option>Blues</option>
+			<option>Folk</option>
+			<option>Classic</option>
+			<option>Indie</option>
+		</select>
+	</p>
+
+	<p><button id="btn" type="button" onclick="alert('Number of options selected: ' + howMany(document.selectForm.musicTypes));">
+		How many selected?</button>
+	</p>
+</form>
+	</button>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
+
