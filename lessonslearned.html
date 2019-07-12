@@ -1,9 +1,8 @@
   
 <!DOCTYPE html>
 <html lang="en">
-  
- <head>
- <link rel="stylesheet" type="text/css" href="site.css">
+  <head>
+     <link rel="stylesheet" type="text/css" href="site.css">
 
 <meta charset="utf-8">
 
@@ -16,22 +15,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
-
-
-<!--FOR THE HOW MANY MUSIC TYPES SELECTED -->
-<script type="text/javascript">
-	function howMany(selectObject){
-		var numSelected = 0;
-		for (var i = 0; i < selectObject.options.length; i++){
-			if(selectObject.options[i].selected){
-				numSelected++;
-			}
-		}
-		return numSelected;
-	}
-</script>
-
-
   </head>
 
 
@@ -47,48 +30,46 @@
   <a href="lessonslearned.html"><button type="button" class="btn btn-primary">Lessons</button></a>
   <a href="updates.html"><button type="button" class="btn btn-primary">Updates</button></a>
 </div>
-<div>
-	
-<form name="selectForm">
-	<p>
-		<label for="musicTypes">Choose few types of music</label>
-		<select id="musicTypes" name="musicTypes" multiple="multiple">
-			<option>Country</option>
-			<option>Rock</option>
-			<option>Rap</option>
-			<option>Pop</option>
-			<option>Blues</option>
-			<option>Folk</option>
-			<option>Classic</option>
-			<option>Indie</option>
-		</select>
-	</p>
+<div class="btn-group ">
+  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Lessons Learned</button>
+     <div class="dropdown-menu">
+      <a class="dropdown-item" href="updates.html">Updates</a>
+      <a class="dropdown-item" href="lessonslearned.html">Lessons Learned</a>
+      <a class="dropdown-item" href="techlearned.html">Technologies Learned</a>
+    </div></div>
 
-	<p><button id="btn" type="button" onclick="alert('Number of options selected: ' + howMany(document.selectForm.musicTypes));">
-		How many selected?</button>
-	</p>
-</form>
-	</button>
+
+</div> 
+
+
+
+
+ </div>
+
+
+<div class="col-sm-4">
 
 
 
 
 
+    </div>
 
 
+
+
+<div class="container">
 
 </div>
 
+<div class="container">
+
+</div>
+
+<div class="container">
 
 
 
-
-
-
-</body>
-
-
-
+</div> </body>
 
 </html>
-
