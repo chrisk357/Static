@@ -1,21 +1,17 @@
-  
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-     <link rel="stylesheet" type="text/css" href="site.css">
-
+<head>
+<link rel="stylesheet" type="text/css" href="site.css">
 <meta charset="utf-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
-  </head>
+</head>
 
 
 
@@ -30,6 +26,7 @@
   <a href="lessonslearned.html"><button type="button" class="btn btn-primary">Lessons</button></a>
   <a href="updates.html"><button type="button" class="btn btn-primary">Updates</button></a>
 </div>
+
 <div class="btn-group ">
   <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Lessons Learned</button>
      <div class="dropdown-menu">
@@ -47,29 +44,118 @@
  </div>
 
 
-<div class="col-sm-4">
+<div class="col-sm">
+
+<p id="todayDate"></p>
+<script>
+var d = new Date();
+document.getElementById("todayDate").innerHTML = d.toDateString();
+</script>
+
+
+<p>Click button to generate random numbers between 1 and 10</p>
+<button onclick="document.getElementById('randNumBtn').innerHTML = getRndInteger(1,10)">Generate</button>
+<p id="randNumBtn"></p>
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+</script>
+
+
+<p>Input your age and click the button:</p>
+<input id="age"  />
+<button onclick="ageFunction()">Try it</button>
+<p id="agefctn"></p>
+<script>
+function ageFunction() {
+  var age, voteable;
+  age = Number(document.getElementById("age").value);
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+  }
+  document.getElementById("agefctn").innerHTML = voteable;
+}
+</script>
+
+
+<p id="ifevening">Good Evening!</p>
+<script>
+if (new Date().getHours() < 18) {
+  document.getElementById("ifevening").innerHTML = "Good day!";
+}
+</script>
+
+
+<p>Click for a time-based greeting:</p>
+<button onclick="timeGreetfctn()">Try it</button>
+<p id="timeGreet"></p>
+<script>
+function timeGreetfctn() {
+  var greeting;
+  var time = new Date().getHours();
+  if (time < 10) {
+    greeting = "Good morning";
+  } else if (time < 20) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+  document.getElementById("timeGreet").innerHTML = greeting;
+}
+</script>
+</div>
+</div>
+</div>
+</div>
 
 
 
 
 
-    </div>
+<div class="col-sm">
+  
+<p id="caseDay"></p>
 
+<script>
+var text;
+switch (new Date().getDay()) {
+  case 1:
+    text = "Today is Monday";
+    break;
+  case 2:
+    text = "Today is Tuesday";
+    break;
+  case 3:
+    text = "Today is Wednesday";
+    break;
+  case 4:
+    text = "Today is Thursday";
+    break;
+  case 5:
+    text = "Today is Friday";
+    break;
+  case 6:
+    text = "Today is Saturday";
+    break;
+  case 0:
+    text = "Today is Sunday";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+document.getElementById("caseDay").innerHTML = text;
+</script>
 
-
-
-<div class="container">
 
 </div>
 
-<div class="container">
+<div class="col-sm">
 
 </div>
 
-<div class="container">
-
-
-
-</div> </body>
+</body>
 
 </html>
